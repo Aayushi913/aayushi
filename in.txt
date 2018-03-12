@@ -1,0 +1,81 @@
+//short description
+#include<iostream>
+using namespsace std;
+class group
+{
+	string gname;
+	string gownername;
+	public void creation();
+	//more functions would be declared here
+}
+class adminteam:public group
+{
+	string team[100];
+	binary approval;
+}
+class groupmembers
+{	
+	string gpmem[100];
+	binary request;
+}
+class people
+{
+	string people[100];
+}
+void creation()
+{
+	cout<<"enter your name ";
+	cout<<"enter your group name";
+	//name will go in database of owner and then we will create a database of entered groupname and will connect it to the code
+	//a valid group id can be provided to the owner of thw group which can be used in case of update and delete{like login id)
+}
+void join()
+{
+	//here we can show the table names of different groups which was passed in creation function
+	//group name :owner name can be displayed
+	cout<<"your name";
+	cout<<"which group you want to join";
+	// name will go in database of groupmembers of that particular group
+}
+void edit() //delete also
+{
+	cout<<"enter your admin id"//id which would be given at the time of creation of the group
+	//if id matches with the data in database of admin then he/she can edit/delete
+	//for edit /delete work can be done on database
+}
+void invite()
+{
+	//binary request variable and binary approval variable will be used
+	//checking would be done with the help of admin database
+	//if approval results in true or 1 then invitation can be send
+}
+int main()
+{
+	cout<<"enter your choice";
+	cout<<"1.creation of group";
+	cout<<"2.join any group";
+	cout<<"3.edit/delete group";
+	cout<<"4.invite";
+	cout<<"5.want to be a member of adminteam";
+	int c;
+	cin>>c;
+	if(c==1)
+	{
+			creation();
+	}
+	if(c==2)
+	{
+		join();
+	}
+	if(c==3)
+	{
+		edit();
+	}
+	if(c==4)
+	{
+		invite();
+	}
+	if(c==5)
+	{
+		invite();//same scenerio would be applied but name of user would get stored in admin team database
+}
